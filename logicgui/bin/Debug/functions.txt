@@ -1,0 +1,39 @@
+func1(a, b): "a&b"
+function1(a, b): "a&b"
+function2(a, b, c, d): "b|c&d|a"
+
+
+asdasdasdasd(a, b, c, d, e, f): "(a&b&(c|d)|e)&!f"
+teststst(a, b, c, d, e): "(a|b)&(c|d)|e"
+
+
+
+func3(b, a, e, d, c): "a&!(b|c)&d|e"
+
+
+func4(b, a, e, d, c, f): "a&!(c|f)&b|d|!e"
+func5(b, a, e, d, c, f): "e&(a&!(c|f)&b|d)"
+
+func2(a, b, c): "a&c|b"
+f2(a, b, c): "a&c|b"
+f1(a, b, c, d): "!(d&a|b)|c"
+novafunkciq(a, b, c, d, e, f, g, h): "e&g|f|!(h&d|!(a&b)|c)"
+fiq(a, b, c, d): "d|b&c|a"
+f0(a, b, c): "a&b&c"
+f3(a, b, c): "a&b&c"
+f4(a, b, c): "a&c|b"
+nomerc5(b, a, e, d, c, f): "e&(a&!(c|f)&b|d)"
+theog(b, d, a, e, c, f, g): "((a|(b|c)&d)&e|f)&!g"
+final(g, c, d): "d&c&g"
+funkcai(a, b, c, d): "a&b&c|d"
+funk(a, b, c, d): "a&b&c|d"
+foundfunction(a, b, c, d): "a|!(!b|!c|!d)"
+lomng(a, b, c, d, e, f, g): "a|b|c|d|e|f|g"
+
+long2(a, b, c, d, e, f, g, h): "a&b&c&d&e&f&g&h"
+
+bal3(a, b, c, d): "a&b|c&d"
+fncnewfound(a, b, c, d): "a|!(!b|!c|!d)"
+
+function1asd(a, b): "a&b"
+funct(a, b, c, d, e, f, g, h): "a&b|!((c&d&(e|f)|g)&!h)"
