@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:logicgui"
         mc:Ignorable="d"
-        Title="MainWindow" Height="576" Width="809" Loaded="Window_Loaded" SizeChanged="Window_SizeChanged">
+        Title="MainWindow" Height="576" Width="809" Loaded="Window_Loaded" SizeChanged="Window_SizeChanged" Activated="Window_Activated">
     <Grid Margin="0,0,0,-6">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="240*"/>
@@ -17,8 +17,7 @@
         <Button x:Name="AllButton" Content="All" HorizontalAlignment="Center" Margin="0,0,0,10" VerticalAlignment="Bottom" Height="45" Width="176" Grid.Column="2" Click="AllButton_Click"/>
         <Button x:Name="SolveButton" Content="Solve" HorizontalAlignment="Center" Margin="0,0,0,10" VerticalAlignment="Bottom" Height="45" Width="176" Grid.Column="1" Click="SolveButton_Click"/>
         <Button x:Name="FindButton" Content="Find" Margin="0,0,10,10" VerticalAlignment="Bottom" Height="45" Width="178" Grid.Column="3" HorizontalAlignment="Right" Click="FindButton_Click"/>
-        <Label x:Name="TreeLabel" Content="" Margin="13,0,14,73" Grid.ColumnSpan="2" Height="42" VerticalAlignment="Bottom"/>
-        <ComboBox x:Name="FunctionComboBox" Grid.Column="2" Margin="10,0,9,72" Grid.ColumnSpan="2" IsDropDownOpen="True" IsSynchronizedWithCurrentItem="False" DropDownClosed="FunctionComboBox_DropDownClosed" Height="43" VerticalAlignment="Bottom" VerticalContentAlignment="Center"/>
+        <ComboBox x:Name="FunctionComboBox" Grid.Column="2" Margin="14,0,9,72" IsDropDownOpen="True" IsSynchronizedWithCurrentItem="False" DropDownClosed="FunctionComboBox_DropDownClosed" Height="43" VerticalAlignment="Bottom" VerticalContentAlignment="Center" Grid.ColumnSpan="2"/>
         <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" ClipToBounds="True" CanContentScroll="True" Grid.ColumnSpan="4" Margin="10,10,10,140" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
             <Canvas x:Name="DrawArea" Background="#FFB7B7B7" ClipToBounds="True">
                 <Canvas.Style>

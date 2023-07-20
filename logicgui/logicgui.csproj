@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DefineWindow.cs" />
     <Compile Include="SolveWindow.cs" />
     <Compile Include="TableWindow.xaml.cs">
       <DependentUpon>TableWindow.xaml</DependentUpon>

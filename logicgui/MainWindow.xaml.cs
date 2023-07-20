@@ -39,21 +39,25 @@ namespace logicgui
 
         private void DefineButton_Click(object sender, RoutedEventArgs e)
         {
-            var cmdw = new CommandWindow();
+            var cmdw = new DefineWindow();
+            
             cmdw.ShowDialog();
             calculated = false;
 
             SetCurrent(cmdw.funcName);
-            
 
-            
+            //FunctionComboBox.
+
+
+
+
         }
         private void SetCurrent(string name)
         {
             
             if (name == null) return;
             
-            TreeLabel.Content = name;
+            
 
             //tuka izkarva darvoto; po-dobre napravo prez dr prozorec da prati obekt s nujnite danni bruh
             var pair = LogicInterpreter.ReadFromDictionary(name);
@@ -68,6 +72,8 @@ namespace logicgui
             treeGraphic.Calculated = calculated;
 
             treeGraphic.DrawTree();
+
+            FunctionComboBox.SelectedIndex = FunctionComboBox.Items.IndexOf(name);
         }
         
         private void FunctionComboBox_DropDownClosed(object sender, EventArgs e)
@@ -151,6 +157,13 @@ namespace logicgui
             treeGraphic.Calculated = calculated;
 
             treeGraphic.DrawTree();
+        }
+
+        private void Window_Activated(object sender, EventArgs e)
+        {
+            //updateva se vinagi; mn zle
+            //trqbva da se sortira kolekciqta i nq nujda ot tui za konsistentnost
+            FunctionComboBox.ItemsSource = LogicInterpreter.DictionaryKeys();
         }
     }
 }

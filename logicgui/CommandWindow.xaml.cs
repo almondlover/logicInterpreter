@@ -20,7 +20,7 @@ namespace logicgui
     /// </summary>
 
     
-    public partial class CommandWindow : Window
+    public abstract partial class CommandWindow : Window
     {
         public string funcName;
         public CommandWindow()
@@ -29,15 +29,8 @@ namespace logicgui
             
         }
 
-        public virtual void ConfirmButton_Click(object sender, RoutedEventArgs e)
-        {
-            string input = FunctionNameText.Text+"("+FunctionArgumentsText.Text+"):"+"\"" +FunctionBodyText.Text+"\"";
-
-            funcName = LogicInterpreter.Define(input);
-            if (funcName == null) { MessageBox.Show("Invalid data"); return; }
-           
-            DialogResult = true;
-        }
+        public abstract void ConfirmButton_Click(object sender, RoutedEventArgs e);
+        
 
 
     }

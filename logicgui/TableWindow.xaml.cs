@@ -41,7 +41,7 @@ namespace logicgui
 
             if (found==null) { MessageBox.Show("None found"); return; }
 
-            var cmdw = new CommandWindow();
+            var cmdw = new DefineWindow();
             cmdw.FunctionArgumentsText.IsReadOnly = true;
             cmdw.FunctionBodyText.IsReadOnly = true;
 

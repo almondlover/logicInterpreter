@@ -27,23 +27,25 @@ namespace logic
     }
     public class BranchNode : TreeNode 
     {
-        
+        private delegate bool BasicOperationDelegate();
+        private BasicOperationDelegate[] _basicOperationTable;
         public override bool Value
         {   
             get
             {
                 //delegate table
-                switch (Token.Type)
-                {
-                    case TokenType.And: return operands[0].Value && operands[1].Value;
-                    case TokenType.Or: return operands[0].Value || operands[1].Value; 
-                    case TokenType.Not: return !operands[0].Value;
-                    default: return operands[0].Value;
-                };
+                return _basicOperationTable[Token.Type - TokenType.Or].Invoke();
             }
             set { Value = value; }
         }
-        public BranchNode(Token tk) : base(tk) {  }
+        public BranchNode(Token tk) : base(tk)
+        { 
+            _basicOperationTable=new BasicOperationDelegate[3]{
+            ()=>{ return operands[0].Value || operands[1].Value; },
+            ()=>{ return operands[0].Value && operands[1].Value;},
+            ()=>{ return !operands[0].Value;}
+            };
+        }
         public List<TreeNode> operands=new List<TreeNode>(2);
         //public override bool Value { get { return false; } set { } }
     }
@@ -375,7 +377,7 @@ namespace logic
             
             var cflag = false;
             int j = 0;
-            while (input[i] != ')')
+            while (input[i] != ')'&&j<values.Length)
             {
                 cflag = false;
                 if (input[i] =='0'||input[i]=='1')
@@ -399,7 +401,7 @@ namespace logic
                 else if (input[i] != ' ') { success = false; return; }
                 if (++i == input.Length) { success = false; return; }
             }
-            if (cflag) { success = false; return; }
+            if (cflag||j!=values.Length) { success = false; return; }
         }
         //bachka samo s konzolen iface :(
         static void InputTable(string input)
