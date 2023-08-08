@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:logicgui"
         mc:Ignorable="d"
-        Title="CommandWindow" Height="202" Width="414">
+        Title="CommandWindow" Width="414" d:DesignHeight="198.82" Height="200" SizeToContent="Height">
     <Grid Width="NaN">
         <Grid.RowDefinitions>
             <RowDefinition/>

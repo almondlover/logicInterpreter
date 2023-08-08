@@ -63,7 +63,7 @@ namespace logicgui
             cmdw.FunctionBodyText.Text = s;
 
             cmdw.ShowDialog();
-            if ((bool)cmdw.DialogResult) funcName = cmdw.funcName;
+            if ((bool)cmdw.DialogResult) { funcName = cmdw.funcName; NameTextBox.Text = funcName; }
             else funcName = "";
         }
     }

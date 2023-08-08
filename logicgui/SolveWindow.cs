@@ -18,14 +18,9 @@ namespace logicgui
         {
             FunctionNameText.IsReadOnly = true;
             FunctionBodyText.IsReadOnly = true;
-            //FunctionArgumentsText.TextChanged += FunctionArgumentsText_TextChanged;
             FunctionArgumentsText.GotFocus += FunctionArgumentsText_GotFocus;
             FunctionArgumentsText.LostFocus += FunctionArgumentsText_LostFocus;
             
-
-            //placeholder = new Label();
-            //placeholder.SetBinding(TextBox.WidthProperty, new Binding("Width") { Source=placeholder });
-            //placeholder.SetBinding(TextBox., new Binding("Width") { Source = placeholder });
         }
         public override void ConfirmButton_Click(object sender, RoutedEventArgs e)
         {

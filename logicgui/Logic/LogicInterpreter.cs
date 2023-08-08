@@ -97,7 +97,7 @@ namespace logic
                 
                 if (++i==input.Length) { success = false; return; }
             }
-            if (++i == input.Length||functions.ContainsKey(funcName)) { success = false; return; }
+            if (++i == input.Length||functions.ContainsKey(funcName)||funcName=="") { success = false; return; }
             //arg na f-iqta
             var cflag = false;
             while (input[i] != ')')

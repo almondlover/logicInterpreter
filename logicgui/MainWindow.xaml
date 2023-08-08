@@ -13,13 +13,13 @@
             <ColumnDefinition Width="240*"/>
             <ColumnDefinition Width="240*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="DefineButton" Content="Define" HorizontalAlignment="Left" Margin="13,0,0,10" VerticalAlignment="Bottom" Height="45" Width="178" Click="DefineButton_Click"/>
-        <Button x:Name="AllButton" Content="All" HorizontalAlignment="Center" Margin="0,0,0,10" VerticalAlignment="Bottom" Height="45" Width="176" Grid.Column="2" Click="AllButton_Click"/>
-        <Button x:Name="SolveButton" Content="Solve" HorizontalAlignment="Center" Margin="0,0,0,10" VerticalAlignment="Bottom" Height="45" Width="176" Grid.Column="1" Click="SolveButton_Click"/>
-        <Button x:Name="FindButton" Content="Find" Margin="0,0,10,10" VerticalAlignment="Bottom" Height="45" Width="178" Grid.Column="3" HorizontalAlignment="Right" Click="FindButton_Click"/>
+        <Button x:Name="DefineButton" Content="Define" Margin="13,0,11,10" Click="DefineButton_Click" Height="45" VerticalAlignment="Bottom"/>
+        <Button x:Name="AllButton" Content="All" Margin="14,0,13,10" Grid.Column="2" Click="AllButton_Click" Height="45" VerticalAlignment="Bottom"/>
+        <Button x:Name="SolveButton" Content="Solve" Margin="13,0,14,10" Grid.Column="1" Click="SolveButton_Click" Height="45" VerticalAlignment="Bottom"/>
+        <Button x:Name="FindButton" Content="Find" Margin="14,0,10,10" VerticalAlignment="Bottom" Height="45" Grid.Column="3" Click="FindButton_Click"/>
         <ComboBox x:Name="FunctionComboBox" Grid.Column="2" Margin="14,0,9,72" IsDropDownOpen="True" IsSynchronizedWithCurrentItem="False" DropDownClosed="FunctionComboBox_DropDownClosed" Height="43" VerticalAlignment="Bottom" VerticalContentAlignment="Center" Grid.ColumnSpan="2"/>
         <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" ClipToBounds="True" CanContentScroll="True" Grid.ColumnSpan="4" Margin="10,10,10,140" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
-            <Canvas x:Name="DrawArea" Background="#FFB7B7B7" ClipToBounds="True">
+            <Canvas x:Name="DrawArea" Background="#FFE6E6E6" ClipToBounds="True">
                 <Canvas.Style>
                     <Style/>
                 </Canvas.Style>
